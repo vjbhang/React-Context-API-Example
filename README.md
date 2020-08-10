@@ -8,6 +8,8 @@ Go to `./src/Example/MultipleAndUpdatingContexts.js`.
 
 Ref Link: [React-Context](https://reactjs.org/docs/context.html)
 
-Combined examples from [here](https://reactjs.org/docs/context.html#updating-context-from-a-nested-component) and [there](https://reactjs.org/docs/context.html#consuming-multiple-contexts), both examples provided by React's documentation.
+Combined examples from [Updating Context From a Nested Component](https://reactjs.org/docs/context.html#updating-context-from-a-nested-component) and [Consuming Multiple Contexts](https://reactjs.org/docs/context.html#consuming-multiple-contexts), both examples provided by React.
 
+
+## Preview
 ![Preview](https://i.imgur.com/jT45Jsj.gif)
