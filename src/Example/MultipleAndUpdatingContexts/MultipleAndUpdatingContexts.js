@@ -35,6 +35,8 @@ class MultipleAndUpdatingContexts extends React.Component {
 
   render() {
     // App component that provides initial context values
+    //   note: in most use cases of providers, value is always provided
+    //          and that value is most likely in the state.
     return (
       <ThemeContext.Provider value={this.state}>
         <UserContext.Provider value={this.state.signedInUser}>

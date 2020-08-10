@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import MultipleAndUpdatingContexts from "./Examples/MultipleAndUpdatingContexts/MultipleAndUpdatingContexts";
+import MultipleAndUpdatingContexts from "./Example/MultipleAndUpdatingContexts/MultipleAndUpdatingContexts";
 
 function App() {
   return (
