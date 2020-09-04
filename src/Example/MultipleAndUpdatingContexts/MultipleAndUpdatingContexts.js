@@ -4,11 +4,18 @@ import ProfilePage from "./Components/profile-page/index";
 
 // Theme context, default to light theme
 export const ThemeContext = React.createContext({
-  theme: "dark",
-  toggleTheme: () => {}
+  theme: "light", //light/dark
+  toggleTheme: () => {
+    this.setState((state) => ({
+      theme: (state.theme = "light" ? "dark" : "light")
+    }));
+  }
+
   // everything declared in createContext are default values.
   // what's passed on as a value in a provider can be easily manipulated
   // with state.
+  // note, again, everything that goes inside createContext is literally context and is not actually sent as context. What's sent as context
+  // is declared in the Provider value props.
 });
 
 // Signed-in user context
