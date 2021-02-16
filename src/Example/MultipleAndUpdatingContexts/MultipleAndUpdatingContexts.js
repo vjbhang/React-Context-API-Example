@@ -7,20 +7,25 @@ export const ThemeContext = React.createContext({
   theme: "light", //light/dark
   toggleTheme: () => {
     this.setState((state) => ({
-      theme: (state.theme = "light" ? "dark" : "light")
+      theme: (state.theme = "light" ? "dark" : "light"),
     }));
-  }
+  },
 
   // everything declared in createContext are default values.
   // what's passed on as a value in a provider can be easily manipulated
   // with state.
   // note, again, everything that goes inside createContext is literally context and is not actually sent as context. What's sent as context
   // is declared in the Provider value props.
+  // the default value is only used when the provider is not provided.
 });
 
+export const SidebarContext = React.createContext(
+  "This is the default value of context"
+);
+
 // Signed-in user context
-const UserContext = React.createContext({
-  name: "Guest"
+export const UserContext = React.createContext({
+  name: "Guest",
 });
 
 class MultipleAndUpdatingContexts extends React.Component {
@@ -29,14 +34,14 @@ class MultipleAndUpdatingContexts extends React.Component {
 
     this.toggleTheme = () => {
       this.setState((state) => ({
-        theme: state.theme === "light" ? "dark" : "light"
+        theme: state.theme === "light" ? "dark" : "light",
       }));
     };
 
     this.state = {
       signedInUser: "Private",
       theme: "light",
-      toggleTheme: this.toggleTheme
+      toggleTheme: this.toggleTheme,
     };
   }
 
