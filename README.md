@@ -23,3 +23,6 @@ As shown in the 'Updating Context From a Nested Component' example, the state is
 If the receiving component needs to update based on context changes, have the component subscribe to changes by using a `Consumer` tag. With the `Consumer` tag as a wrapper, have the component return as an arrow function within `{}` with the receiving `value` props declared. Example: `<ThemeContext.Consumer> {({toggleTheme, theme}) => ( <Container prop={toggleTheme} prop2={theme} /> )} </ThemeContext.Consumer>`
 
 When consuming multiple contexts, "To keep context re-rendering fast, React needs to make each context consumer a separate node in the tree."
+
+Added 2/15/2021:
+Had some misunderstanding. When not using the Provider but only Consumer for the Context, the default values _are_ called. Otherwise, use Provider for subscribed components where the context is being dynamically changed.
